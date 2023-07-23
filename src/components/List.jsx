@@ -9,7 +9,7 @@ function List() {
             <ItemProp marca='Bugatti' ano_lancamento={2000}/>
             <ItemProp marca='Ferrari' ano_lancamento={2022}/>
             <ItemProp marca='renoult' ano_lancamento={2001}/>
-            <ItemProp  />
+            <ItemProp marca="Mecerdes" ano_lancamento={2000}/>
         </ul>
     </>)
 }

@@ -9,9 +9,11 @@ function ItemProp({marca, ano_lancamento}){
     )
 }
 
+
+//Codigo usado para validação, sem precisar fazer if ou algo do tipo
 //pequena validação com ProtoTypes
-ItemProp.protoTypes = {
-    marca: PropTypes.string,
+ItemProp.propTypes = {
+    marca: PropTypes.string.isRequired,
     ano_lancamento: PropTypes.number.isRequired
 }
 
