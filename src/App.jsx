@@ -7,13 +7,18 @@ import List from './components/List';
 import Eventos from './components/Eventos';
 import Forms from './components/Forms';
 import Condicional from './components/Condicional';
+import OutraLista from './components/OutraLista';
 import './App.css';
 
 function App() {
+  const meusItens = ['React', 'Vue', 'Angular'];
   return (
     <div className="App">
       <header className="App-header">
         <Condicional />
+        <OutraLista itens={meusItens}/>
+        
+        <OutraLista itens={[]}/>
       </header>
     </div>
   );
