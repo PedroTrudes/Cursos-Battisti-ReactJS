@@ -1,7 +1,8 @@
 function Button(props) {
+    //Pegando um evendo via props
     return(
         <>
-        <button onClick={props.evento} >{props.text}</button>
+        <button type={props.tipo} onClick={props.event} >{props.text}</button>
         </>
     )
 }

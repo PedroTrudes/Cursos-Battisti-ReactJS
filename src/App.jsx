@@ -6,12 +6,23 @@ import Pessoa from './components/Pessoa';
 import List from './components/List';
 import Eventos from './components/Eventos';
 import Forms from './components/Forms';
+import Condicional from './components/Condicional';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <Condicional />
+      </header>
+    </div>
+  );
+}
+
+export default App;
+
+/*
+
         <HelloWorld />
         <Nome />
         <h3>Props e Fragmets</h3>
@@ -27,9 +38,4 @@ function App() {
         <Eventos numero={1} />
         <h3>Formularios Com Eventos</h3>
         <Forms />
-      </header>
-    </div>
-  );
-}
-
-export default App;
+*/
