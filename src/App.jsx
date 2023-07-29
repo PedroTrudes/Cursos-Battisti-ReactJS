@@ -1,32 +1,37 @@
-import logo from './logo.svg';
-import HelloWorld from './components/HelloWorld';
-import Nome from './components/Nome';
-import SayMyName from './components/SayMyName';
-import Pessoa from './components/Pessoa';
-import List from './components/List';
-import Eventos from './components/Eventos';
-import Forms from './components/Forms';
-import Condicional from './components/Condicional';
-import OutraLista from './components/OutraLista';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import {} from 'react-dom'
 import './App.css';
+import Home from './pages/Home';
+import Empresa from './pages/Empresa';
+import Contato from './pages/Contato';
+import NavBar from './components/layout/NavBar';
+import Footer from './components/layout/Footer';
 
 function App() {
-  const meusItens = ['React', 'Vue', 'Angular'];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <Condicional />
-        <OutraLista itens={meusItens}/>
-        
-        <OutraLista itens={[]}/>
-      </header>
-    </div>
+      <Router>
+        <NavBar />
+
+        <Routes>
+          <Route path='/' element={<Home />}/>
+          <Route path='/empresa' element={<Empresa />}/>
+          <Route path='/contato' element={<Contato />}/>
+        </Routes>
+
+        <Footer />
+      </Router>
   );
 }
 
 export default App;
 
 /*
+<header className="App-header">
+        <h1>State lift</h1>
+        <SeuNome setNome={setNome}/>
+        <Saudacao nome={nome} />
+      </header>
 
         <HelloWorld />
         <Nome />
@@ -43,4 +48,9 @@ export default App;
         <Eventos numero={1} />
         <h3>Formularios Com Eventos</h3>
         <Forms />
+
+          <Condicional />
+        <OutraLista itens={meusItens}/>
+        
+        <OutraLista itens={[]}/>
 */
